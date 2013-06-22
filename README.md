@@ -1,26 +1,26 @@
+Geolocation for cocos2-dx for android and iOS.
 
-- ios : 
+franck@mumblecore.org
 
-* add the corelocation framework, in linked framework.
+## ios : 
 
-- android :
+add the corelocation framework, in linked framework.
 
-* add this in your manifest:
+## android :
+
+add this in your manifest:
 
 	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
-* in your main java activity class:
-
-add:
+add in your main java activity class:
 
 import org.mumblecore.location.CClocation;
 
-in 	protected void onCreate(Bundle savedInstanceState)
+in protected void onCreate(Bundle savedInstanceState) add this call:
 
-add this call:
-		CClocation.setContext(getApplicationContext(), this);
+CClocation.setContext(getApplicationContext(), this);
 
- *in CClocation.java
+in CClocation.java:
 
 replace all <MAIN_CLASS> occurencies  with the name of your class that extends Cocos2dxActivity
