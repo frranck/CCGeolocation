@@ -23,4 +23,4 @@ CClocation.setContext(getApplicationContext(), this);
 
 in CClocation.java:
 
-replace all <MAIN_CLASS> occurencies  with the name of your class that extends Cocos2dxActivity
+replace all MAIN_CLASS occurencies  with the name of your class that extends Cocos2dxActivity
