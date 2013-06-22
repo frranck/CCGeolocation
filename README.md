@@ -1,7 +1,5 @@
 Geolocation for cocos2-dx for android and iOS.
 
-franck@mumblecore.org
-
 ## ios : 
 
 add the corelocation framework, in linked framework.
