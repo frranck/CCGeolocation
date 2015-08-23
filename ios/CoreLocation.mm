@@ -67,6 +67,9 @@ void CoreLocationImpl::dealloc ( void ) {
         [locationManager
          setDesiredAccuracy:kCLLocationAccuracyBestForNavigation];
         [locationManager setDistanceFilter:kCLDistanceFilterNone];
+        if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_7_1) {
+            [locationManager requestWhenInUseAuthorization];
+        }
         [locationManager startUpdatingLocation];
     }
 }
