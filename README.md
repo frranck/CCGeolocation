@@ -3,6 +3,7 @@ Geolocation for cocos2-dx for android and iOS.
 ## ios : 
 
 add the corelocation framework, in linked framework.
+
 add a key NSLocationWhenInUseUsageDescription of type String in plist
 
 ## android :
