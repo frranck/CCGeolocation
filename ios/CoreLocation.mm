@@ -97,4 +97,20 @@ void CoreLocationImpl::dealloc ( void ) {
 
 }
 
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(nonnull NSArray<CLLocation *> *)locations
+{
+    CLLocation *clLocation = [locations lastObject];
+
+    NSLog([NSString stringWithFormat:
+           @"Altitude: %f Latitude: %f Longitude: %f"
+           @" Course: %f Speed: %f",
+           clLocation.altitude,
+           clLocation.coordinate.latitude,
+           clLocation.coordinate.longitude
+           clLocation.speed]);
+    CCCoreLocation::getInstance()->getLocationDone((float) clLocation.coordinate.latitude, (float) clLocation.coordinate.longitude);
+    
+    [locationManager stopUpdatingLocation];
+}
+
 @end
